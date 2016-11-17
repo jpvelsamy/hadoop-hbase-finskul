@@ -1,5 +1,7 @@
 package com.finskul.hbase;
 
+import static org.junit.Assert.*;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,6 +32,17 @@ public class HbaseClientTest {
 	public void testPut()
 	{
 		HbaseClient.putSomeRows();
+	}
+	
+	@Test
+	public void testJdbc()
+	{
+		try {
+			JdbcClient.connect();
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail(e.getMessage());
+		}
 	}
 
 }

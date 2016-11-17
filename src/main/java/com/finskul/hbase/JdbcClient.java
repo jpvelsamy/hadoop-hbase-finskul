@@ -9,7 +9,7 @@ import org.apache.phoenix.util.PhoenixRuntime;
 
 public class JdbcClient {
 
-	public static void main(String args[]) throws Exception {
+	public static void connect() throws Exception {
 	    Connection conn;
 	    
 	    /*Class.forName("org.apache.phoenix.queryserver.client.Driver");
